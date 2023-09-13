@@ -84,6 +84,13 @@ if __name__ == "__main__":
     df = pd.DataFrame(userList)
 
 
+sql = """
+    update user_tb
+    set
+        password = %s,
+        name = %s,
+        email = %s 
+"""
 
 
 

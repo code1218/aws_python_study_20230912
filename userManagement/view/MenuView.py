@@ -22,7 +22,7 @@ class MenuView:
         elif select == "3":
             UserView.register()
         elif select == "4":
-            pass
+            UserView.updateUser()
         elif select == "5":
             pass
         else:

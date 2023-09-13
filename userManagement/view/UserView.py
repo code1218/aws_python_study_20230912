@@ -53,7 +53,14 @@ class UserView:
         print(df)
         userId = input("수정하실 userId를 입력하세요 >>> ")
         index = df.index[df["userId"] == int(userId)].values[0]
-        UserView.showUpdateMenu(response.body[index])
+        user = UserView.showUpdateMenu(response.body[index])
+        if not bool(user):
+            print("수정을 취소하였습니다.")
+            return
+
+        response = UserController.updateUser(user)
+        if(bool(response.body)):
+            print("========<< 수정 완료 >>========")
 
 
     @staticmethod

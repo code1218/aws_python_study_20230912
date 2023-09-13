@@ -4,6 +4,3 @@ class ResponseEntity:
         self.status = status
         self.body = body
 
-
-if __name__ == "__main__":
-    print(ResponseEntity(body="test").__dict__)

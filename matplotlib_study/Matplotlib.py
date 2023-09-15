@@ -49,6 +49,53 @@ axes1.bar(x, y, color="blue", label="bar")
 axes2.plot(x2, y2, color="red", label="plot")
 plt.show()
 
+from matplotlib import font_manager, rc
+rc("font", family="Hancom Gothic")
+
+# 점그래프 scatter
+figure = plt.figure()
+axes = figure.add_subplot(111)
+
+x = [1,2,3,4]
+y = [2,4,6,8]
+x2 = [1,1,3,4]
+y2 = [6,2,4,6]
+axes.scatter(x,y)
+axes.scatter(x2,y2)
+plt.title("제목")
+plt.xlabel("엑스축 이름")
+plt.ylabel("와이축 이름")
+plt.show()
+
+#원형 그래프
+
+
+font_list = font_manager.findSystemFonts(fontpaths=None, fontext="ttf")
+for font in font_list:
+    print(font)
+
+
+
+figure = plt.figure()
+axes = figure.add_subplot(111)
+
+label = ["축구", "야구", "c", "d"]
+data = [10, 20, 5, 30]
+
+axes.pie(data, labels=label)
+# plt.show()
+
+plt.savefig("test")
+
+
+
+
+
+
+
+
+
+
 
 
 
